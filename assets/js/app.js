@@ -11,23 +11,39 @@
 //   }
 // }, 3000);
 
-const images=document.querySelectorAll(".images img")
-console.log(images);
-let i=0;
+let i = 0;
+const images = document.querySelectorAll(".images img");
 
-// const nextSlide = 
-
-setInterval(() => {
+const nextSlide = () => {
   images[i].classList.remove("active");
   i++;
   if (i == images.length) {
     i = 0;
   }
   images[i].classList.add("active");
-}, 3000);
+};
 
+const previouseSlide = () => {
+  images[i].classList.remove("active");
+  i--;
+  if (i == -1) {
+    i = images.length - 1;
+  }
+  images[i].classList.add("active");
+};
 
+const load = () => {
+  setInterval(nextSlide, 3000);
+  document
+    .querySelector(".left-controller")
+    .addEventListener("click", previouseSlide);
 
+  document
+    .querySelector(".right-controller")
+    .addEventListener("click", nextSlide);
+};
+
+load();
 
 // console.log(document.querySelector("#right").className);
 // console.log(document.querySelector("#right").classList);
