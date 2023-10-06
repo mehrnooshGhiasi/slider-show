@@ -1,8 +1,11 @@
 body {
   margin: 0;
 }
+.title{
+    text-align: center;
+}
 .slider-box {
-  margin: 20px;
+  margin: 30px 40px;
   position: relative;
 }
 .slider-box img {
@@ -19,5 +22,14 @@ body {
     justify-content: space-between;
     padding: 0 2rem;
     top:45%;
+}
+.controllers button{
+       border: none;
+    border-radius: 50%;
+    background-color: white;
+    padding: 7px 8px;
+    font-size: 17px;
+    opacity: 65%;
+
 }
 
