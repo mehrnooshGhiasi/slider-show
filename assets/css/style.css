@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+}
+.slider-box {
+  margin: 20px;
+  position: relative;
+}
+.slider-box img {
+  width: 100%;
+  display: none;
+}
+.slider-box img.active {
+  display: inline-block;
+}
+.controllers {
+    width: 94.8%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    top:45%;
+}
+
